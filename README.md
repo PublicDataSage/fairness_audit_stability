@@ -6,41 +6,43 @@ This repository studies whether categorical fairness-audit conclusions remain re
 
 ## Core Formulation
 
-For retraining realization \(s\), operational threshold \(t\), and audit tolerance \(\tau\),
+For retraining realization $s$, operational threshold $t$, and audit tolerance $\tau$,
 
-\[
+$$
 C(s,t,\tau)=\mathbb{I}[V(s,t)\leq\tau].
-\]
+$$
 
 All fairness criteria are represented as nonnegative violation scores. For demographic parity ratio (DPR), the symmetric ratio is converted to
 
-\[
+$$
 V^{\mathrm{DPR}}=1-\mathrm{DPR}_{\mathrm{sym}},
-\]
+$$
 
-so the same \(V\leq\tau\) convention applies to every metric.
+so the same $V\leq\tau$ convention applies to every metric.
 
-The within-tolerance probability and pairwise verdict instability are
+The within-tolerance probability is
 
-\[
+$$
 p(t,\tau)=\Pr_s(C=1),
-\]
+$$
 
-\[
+and pairwise verdict instability is
+
+$$
 VI(t,\tau)=2p(t,\tau)\left[1-p(t,\tau)\right].
-\]
+$$
 
 The Audit Stability Surface is
 
-\[
+$$
 \mathcal{A}(t,\tau)=p(t,\tau).
-\]
+$$
 
-With \(\epsilon=0.10\), a surface point is classified as:
+With $\epsilon=0.10$, a surface point is classified as:
 
-- **stable-outside:** \(p\leq\epsilon\)
-- **unstable:** \(\epsilon<p<1-\epsilon\)
-- **stable-within:** \(p\geq1-\epsilon\)
+- **stable-outside:** $p\leq\epsilon$
+- **unstable:** $\epsilon<p<1-\epsilon$
+- **stable-within:** $p\geq1-\epsilon$
 
 ## Experiments
 
