@@ -1,0 +1,29 @@
+                               GEE Regression Results                              
+===================================================================================
+Dep. Variable:             unstable_region   No. Observations:                 3216
+Model:                                 GEE   No. clusters:                       96
+Method:                        Generalized   Min. cluster size:                  31
+                      Estimating Equations   Max. cluster size:                  41
+Family:                           Binomial   Mean cluster size:                33.5
+Dependence structure:         Exchangeable   Num. iterations:                     6
+Date:                     Thu, 24 Sep 2026   Scale:                           1.000
+Covariance type:                    robust   Time:                         22:14:17
+==================================================================================================================
+                                                     coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------------
+Intercept                                         23.4487      4.819      4.866      0.000      14.005      32.893
+C(model)[T.logistic_regression]                    0.0816      0.553      0.148      0.883      -1.002       1.165
+C(model)[T.random_forest]                          0.3174      0.429      0.740      0.459      -0.523       1.158
+C(fairness_metric)[T.dpr_violation]               -0.1689      0.540     -0.313      0.754      -1.227       0.889
+C(fairness_metric)[T.eod_violation]               -1.1736      0.696     -1.687      0.092      -2.537       0.190
+C(fairness_metric)[T.equalized_odds_violation]    -0.8146      0.813     -1.003      0.316      -2.407       0.778
+C(dataset)[T.adult]                                0.3005      0.869      0.346      0.729      -1.403       2.004
+C(dataset)[T.compas]                              -0.8659      1.887     -0.459      0.646      -4.564       2.832
+C(dataset)[T.german]                              -1.4630      3.669     -0.399      0.690      -8.655       5.729
+log_effective_support_n                           -0.2051      0.517     -0.397      0.691      -1.218       0.808
+standardized_boundary_distance                   -18.0199      1.549    -11.636      0.000     -21.055     -14.984
+sd_accuracy                                       70.5575    143.434      0.492      0.623    -210.568     351.683
+==============================================================================
+Skew:                         -0.0262   Kurtosis:                      34.4382
+Centered skew:                -0.0910   Centered kurtosis:             31.2539
+==============================================================================

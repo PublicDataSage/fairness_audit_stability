@@ -1,0 +1,5 @@
+model,n_observations,n_audit_families
+Clustered OLS - contextual,3216,96
+Clustered OLS - mechanism adjusted,3216,96
+Fractional GEE,3216,96
+Binary unstable-region GEE,3216,96

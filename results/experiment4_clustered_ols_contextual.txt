@@ -1,0 +1,36 @@
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     verdict_instability   R-squared:                       0.237
+Model:                             OLS   Adj. R-squared:                  0.235
+Method:                  Least Squares   F-statistic:                     64.07
+Date:                 Thu, 24 Sep 2026   Prob (F-statistic):           9.01e-38
+Time:                         22:14:16   Log-Likelihood:                 1448.6
+No. Observations:                 3216   AIC:                            -2875.
+Df Residuals:                     3205   BIC:                            -2808.
+Df Model:                           10                                         
+Covariance Type:               cluster                                         
+==================================================================================================================
+                                                     coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------------
+Intercept                                          0.3838      0.084      4.587      0.000       0.220       0.548
+C(model)[T.logistic_regression]                   -0.0253      0.011     -2.260      0.024      -0.047      -0.003
+C(model)[T.random_forest]                          0.0029      0.008      0.340      0.734      -0.014       0.019
+C(fairness_metric)[T.dpr_violation]               -0.0200      0.010     -1.971      0.049      -0.040      -0.000
+C(fairness_metric)[T.eod_violation]               -0.0171      0.021     -0.832      0.405      -0.057       0.023
+C(fairness_metric)[T.equalized_odds_violation]    -0.0176      0.017     -1.015      0.310      -0.051       0.016
+C(dataset)[T.adult]                                0.0003      0.015      0.016      0.987      -0.030       0.030
+C(dataset)[T.compas]                              -0.1440      0.046     -3.140      0.002      -0.234      -0.054
+C(dataset)[T.german]                              -0.1940      0.096     -2.026      0.043      -0.382      -0.006
+log_effective_support_n                           -0.0516      0.011     -4.644      0.000      -0.073      -0.030
+sd_accuracy                                        9.6798      4.109      2.355      0.018       1.625      17.734
+==============================================================================
+Omnibus:                      327.634   Durbin-Watson:                   0.141
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              434.915
+Skew:                           0.896   Prob(JB):                     3.63e-95
+Kurtosis:                       3.182   Cond. No.                     5.07e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (CRV1)
+[2] The condition number is large, 5.07e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
